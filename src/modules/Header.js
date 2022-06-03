@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import '../styles/Header.css';
 
 export default class Header extends Component {
-
   linkStyle = {
     margin: '1rem',
     padding: '10px',
@@ -24,18 +23,20 @@ export default class Header extends Component {
       <header>
         <h1>BookStore CMS</h1>
         <nav>
-        <Link
+          <Link
             to={this.props.obj[1].link}
             style={this.props.obj[1].status ? this.linkStyle : this.nonActlink}
-          >Books</Link>
-         <Link
+          >
+            Books
+          </Link>
+          <Link
             to={this.props.obj[0].link}
             style={this.props.obj[0].status ? this.linkStyle : this.nonActlink}
           >
             Cateories
-          </Link>  
+          </Link>
         </nav>
       </header>
-    )
+    );
   }
 }

@@ -8,11 +8,9 @@ import Categories from './modules/Categories';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-  <Routes>
-    <Route path="/" element={<Books />} />
-    <Route path="categories" element={<Categories />} />
-  </Routes>
-</BrowserRouter>,
+    <Routes>
+      <Route path="/" element={<Books />} />
+      <Route path="categories" element={<Categories />} />
+    </Routes>
+  </BrowserRouter>,
 );
-
-

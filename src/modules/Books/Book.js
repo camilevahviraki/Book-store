@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import '../../styles/Book.css';
 
 export default class Book extends Component {
@@ -11,20 +11,18 @@ export default class Book extends Component {
           <span>{this.props.book.Author}</span>
           <ul>
             <li>
-              <button>Comments</button>
+              <button type="button">Comments</button>
             </li>
             <li>
-              <button>Remove</button>
+              <button type="button">Remove</button>
             </li>
             <li>
-              <button>Edit</button>
+              <button type="button">Edit</button>
             </li>
           </ul>
         </div>
         <div className="Middle">
-          <div className="Circle">
-
-          </div>
+          <div className="Circle" />
           <span>{this.props.book.Completed}</span>
           <span>Completed</span>
         </div>

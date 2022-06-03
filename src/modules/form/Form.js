@@ -3,17 +3,17 @@ import Input from './Input';
 
 export default class Form extends Component {
   state = {
-    book : '',
+    book: '',
     author: '',
   }
 
   ChangeInput = (e) => {
     const X = e.target.name;
-    if(X === 'Author') {
+    if (X === 'Author') {
       this.setState({
         author: e.target.value,
       });
-    }else if(X === 'Add book') {
+    } else if (X === 'Add book') {
       this.setState({
         book: e.target.value,
       });
@@ -23,10 +23,10 @@ export default class Form extends Component {
   render() {
     return (
       <div>
-        <Input name = {"Add book"} enterBook = {this.ChangeInput} />
-        <Input name = {"Author"} enterBook = {this.ChangeInput}/>
-        <button type="submit" onClick = {() => {this.props.addBook(this.state)}}>Add Book</button>
+        <Input name="Add book" enterBook={this.ChangeInput} />
+        <Input name="Author" enterBook={this.ChangeInput} />
+        <button type="submit" onClick={() => { this.props.addBook(this.state); }}>Add Book</button>
       </div>
-    )
+    );
   }
 }
