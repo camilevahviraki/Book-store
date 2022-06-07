@@ -1,10 +1,11 @@
-import React from 'react';
+const CHECK_STATUS = 'Bookstore/redux/books/CHECK_STATUS';
+const UPDATE_STATUS = 'Bookstore/redux/books/UPDATE_STATUS';
 
 function categories(state = [], action) {
   switch (action.type) {
-    case 'CHECK-STATUS':
+    case CHECK_STATUS:
       return 'Under construction';
-    case 'UPDATE-STATUS': {
+    case UPDATE_STATUS: {
       state.forEach((element) => {
         if (element.id === action.bookId) {
           element.status = action.newStatus;
@@ -17,12 +18,12 @@ function categories(state = [], action) {
   }
 }
 
-export function check(bookId) {
-  return { type: 'CHECK-STATUS' };
+export function check() {
+  return { type: CHECK_STATUS };
 }
 
 export function update(bookId, newStatus) {
-  return { type: 'UPDATE-STATUS', newStatus, bookId };
+  return { type: UPDATE_STATUS, newStatus, bookId };
 }
 
 export default categories;
