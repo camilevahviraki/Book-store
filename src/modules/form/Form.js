@@ -1,32 +1,39 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../../redux/books/books';
 import Input from './Input';
 
-export default class Form extends Component {
-  state = {
+function Form() {
+  const dispatch = useDispatch();
+  const [state, setState] = useState({
     book: '',
     author: '',
-  }
+  });
 
-  ChangeInput = (e) => {
+  const ChangeInput = (e) => {
     const X = e.target.name;
     if (X === 'Author') {
-      this.setState({
+      setState({
+        book: state.book,
         author: e.target.value,
       });
     } else if (X === 'Add book') {
-      this.setState({
+      setState({
+        author: state.author,
         book: e.target.value,
       });
     }
-  }
+  };
 
-  render() {
-    return (
-      <div>
-        <Input name="Add book" enterBook={this.ChangeInput} />
-        <Input name="Author" enterBook={this.ChangeInput} />
-        <button type="submit" onClick={() => { this.props.addBook(this.state); }}>Add Book</button>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Input name="Add book" enterBook={ChangeInput} />
+      <Input name="Author" enterBook={ChangeInput} />
+      <button type="submit" onClick={() => dispatch(addBook(state))}>
+        Add Book
+      </button>
+    </div>
+  );
 }
+
+export default Form;
