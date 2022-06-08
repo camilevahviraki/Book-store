@@ -2,13 +2,38 @@ const REMOVE_BOOK = 'Bookstore/redux/books/REMOVE_BOOK';
 const ADD_BOOK = 'Bookstore/redux/books/ADD_BOOK';
 const DISPLAY_BOOK = 'Bookstore/redux/books/DISPLAY_BOOK';
 
-let defaultState = [];
+let defaultState = [
+  {
+    id: 1,
+    title: 'Hunger games',
+    currentChap: 'Chap 1',
+    Author: 'Camilux',
+    Completed: '15',
+    type: 'action',
+  },
+  {
+    id: 2,
+    title: 'Transporters',
+    currentChap: 'Chap 3',
+    Author: 'A7',
+    Completed: '05',
+    type: 'adventure',
+  },
+];
 
 export default function booksReducer(state = defaultState, action) {
   switch (action.type) {
     case ADD_BOOK: {
-      defaultState = [...state, action.book];
-      return [...state, action.book];
+      const newBook = {
+        id: state.length + 1,
+        title: action.book.book,
+        currentChap: 'Chap 1',
+        Author: action.book.author,
+        Completed: '0',
+        type: 'adventure',
+      };
+      defaultState = [...state, newBook]; // [...state, newBook]
+      return defaultState;
     }
 
     case REMOVE_BOOK: {
