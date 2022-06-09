@@ -8,15 +8,15 @@ export default function Book(props) {
   return (
     <div className="Book">
       <div className="leftH">
-        <span>{props.book.type}</span>
-        <h2>{props.book.title}</h2>
-        <span>{props.book.Author}</span>
+        <span>{props.book[1][0].category}</span>
+        <h2>{props.book[1][0].title}</h2>
+        <span>{props.book[1][0].author}</span>
         <ul>
           <li>
             <button type="button">Comments</button>
           </li>
           <li>
-            <button type="button" onClick={() => dispatch(removeBook(props.book.id))}>Remove</button>
+            <button type="button" onClick={() => dispatch(removeBook(props.book[0]))}>Remove</button>
           </li>
           <li>
             <button type="button">Edit</button>
