@@ -1,10 +1,14 @@
-import { useSelector } from 'react-redux';
-import React, { Component, useState } from 'react';
+import { useSelector, connect } from 'react-redux';
+import React, { useEffect, useState } from 'react';
 import Book from './Book';
 import Form from '../form/Form';
 import Header from '../Header';
+import { displayBook } from '../../redux/books/books';
 
-export default function Books() {
+function Books({ getUsers }) {
+  useEffect(() => {
+    getUsers();
+  }, []);
   const Bookstore = useSelector((state) => state.booksReducer);
   const [links] = useState([
     { status: false, link: '../categories' },
@@ -23,3 +27,12 @@ export default function Books() {
     </div>
   );
 }
+
+const mapUseReducerProps = (state) => ({ booksReducer: state.booksReducer });
+
+const mapDispatchToProps = (dispatch) => ({ getUsers: () => dispatch(displayBook()) });
+
+export default connect(
+  mapUseReducerProps,
+  mapDispatchToProps,
+)(Books);
