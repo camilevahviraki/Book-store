@@ -8,15 +8,22 @@ export default function Book(props) {
   return (
     <div className="Book">
       <div className="leftH">
-        <span>{props.book[1][0].category}</span>
-        <h2>{props.book[1][0].title}</h2>
-        <span>{props.book[1][0].author}</span>
-        <ul>
+        <span className="category">{props.book[1][0].category}</span>
+        <h2 className="Title">{props.book[1][0].title}</h2>
+        <span className="author">{props.book[1][0].author}</span>
+        <ul className="ul-Buttons">
           <li>
             <button type="button">Comments</button>
+            <span className="line"></span>
           </li>
           <li>
-            <button type="button" onClick={() => dispatch(removeBook(props.book[0]))}>Remove</button>
+            <button
+              type="button"
+              onClick={() => dispatch(removeBook(props.book[0]))}
+            >
+              Remove
+            </button>
+            <span className="line"></span>
           </li>
           <li>
             <button type="button">Edit</button>
@@ -24,14 +31,24 @@ export default function Book(props) {
         </ul>
       </div>
       <div className="Middle">
-        <div className="Circle" />
-        <span>{props.book.Completed}</span>
-        <span>Completed</span>
+        <div className="Circle">
+          <div className="mask half">
+            <div className="fill">
+              <div className="inside-circle" />
+            </div>
+          </div>
+        </div>
+        <div className="progress">
+          <p className="percentage">28%</p>
+          <span className="completed">Completed</span>
+        </div>
       </div>
       <div className="right">
-        <h3>CURRENT CHAPTER</h3>
-        <span>{props.book.currentChap}</span>
-        <button type="button">UPDATE PROGRESS</button>
+        <h3 className="Current-Chapter">CURRENT CHAPTER</h3>
+        <span className="chapter">Introduction</span>
+        <button type="button" className="check_button">
+          UPDATE PROGRESS
+        </button>
       </div>
     </div>
   );

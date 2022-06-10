@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../../redux/books/books';
 import Input from './Input';
+import '../../styles/form.css';
 
 function Form() {
   const dispatch = useDispatch();
@@ -26,12 +27,15 @@ function Form() {
   };
 
   return (
-    <div>
-      <Input name="Add book" enterBook={ChangeInput} />
-      <Input name="Author" enterBook={ChangeInput} />
-      <button type="submit" onClick={() => dispatch(addBook(state))}>
-        Add Book
-      </button>
+    <div className="form">
+      <h2 className="AddBook">ADD NEW BOOK</h2>
+      <div className="formIn">
+        <Input name="Add book" enterBook={ChangeInput} />
+        <Input name="Author" enterBook={ChangeInput} />
+        <button type="submit" onClick={() => dispatch(addBook(state))}>
+          ADD BOOK
+        </button>
+      </div>
     </div>
   );
 }
