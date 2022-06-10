@@ -8,14 +8,13 @@ export default class Header extends Component {
     padding: '10px',
     textDecoration: 'none',
     color: 'blue',
-    border: '1px solid blue',
   };
 
   nonActlink = {
     margin: '1rem',
     padding: '10px',
     textDecoration: 'none',
-    color: 'black',
+    color: '#121212',
   };
 
   render() {

@@ -8,6 +8,7 @@ export default class Input extends Component {
         placeholder={this.props.name}
         onChange={this.props.enterBook}
         name={this.props.name}
+        className="input"
       />
     );
   }

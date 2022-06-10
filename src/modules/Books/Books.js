@@ -16,7 +16,7 @@ function Books({ getUsers }) {
   ]);
 
   return (
-    <div>
+    <div className="allBooks">
       <Header obj={links} />
       {
         Bookstore.map((book) => (

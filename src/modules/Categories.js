@@ -12,7 +12,7 @@ export default function Categories() {
   ]);
 
   return (
-    <div>
+    <div className="categoriesZ">
       <Header obj={links} />
       <h2> Categories</h2>
       <button type="button" onClick={() => dispatch(check())}>

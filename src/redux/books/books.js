@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const POST_GET_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/czZaZBLIsHvyvBPgNWm3/books';
+const POST_GET_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/czZaZBLIsHvyvBPgNWm3/books';
 const REMOVE_BOOK = 'Bookstore/redux/books/REMOVE_BOOK';
 const ADD_BOOK = 'Bookstore/redux/books/ADD_BOOK';
 const DISPLAY_BOOK = 'Bookstore/redux/books/DISPLAY_BOOK';
