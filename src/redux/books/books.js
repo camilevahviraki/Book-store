@@ -4,7 +4,6 @@ const POST_GET_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net
 const REMOVE_BOOK = 'Bookstore/redux/books/REMOVE_BOOK';
 const ADD_BOOK = 'Bookstore/redux/books/ADD_BOOK';
 const DISPLAY_BOOK = 'Bookstore/redux/books/DISPLAY_BOOK';
-const SHOW_MESSAGE = 'Bookstore/redux/books/SHOW_MESSAGE';
 
 let defaultState = [];
 
