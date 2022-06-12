@@ -2,6 +2,8 @@
 
 # Book-store
 
+![](public/desktop(3).png)
+
 ## Built With
 
 - React
@@ -17,6 +19,10 @@ To get a local copy up and running follow these simple example steps.
 - write `https://github.com/camilevahviraki/Book-store`.
 - go to the repository folder in your command prompt `Book-store`.
 - Open terminal in that folder and run `npm run start`.
+
+## Live link
+
+See the [live demo](https://comforting-centaur-317ced.netlify.app/) of my bookstore.
 
 
 ## Authors
