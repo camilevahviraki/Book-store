@@ -22,7 +22,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live link
 
-See the [live demo](https://comforting-centaur-317ced.netlify.app/) of my bookstore.
+See the [live demo](https://book-store-camile.netlify.app) of my bookstore.
 
 
 ## Authors
